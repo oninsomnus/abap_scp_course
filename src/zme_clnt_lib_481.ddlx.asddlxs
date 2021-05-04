@@ -1,0 +1,48 @@
+@Metadata.layer: #CORE
+@UI.headerInfo: {
+    typeName: 'Cliente',
+    typeNamePlural: 'Clientes',
+    typeImageUrl: '',
+    imageUrl: 'Url',
+    title: {
+        type: #STANDARD,
+        label: '',
+        iconUrl: '',
+        criticality: '',
+        criticalityRepresentation: #WITHOUT_ICON,
+        value: 'Nombre',
+        valueQualifier: '',
+        targetElement: '',
+        url: ''
+    },
+    description: {
+        type: #STANDARD,
+        label: '',
+        iconUrl: '',
+        criticality: '',
+        criticalityRepresentation: #WITHOUT_ICON,
+        value: 'Apellidos',
+        valueQualifier: '',
+        targetElement: '',
+        url: ''
+    }
+}
+annotate view Z_B_CLNT_LIB_481
+    with 
+{
+    @UI.facet: [{ id: 'DetallesLibro', label: 'Detalles del cliente', type: #COLLECTION, position: 10 },
+                { id: 'Cliente', parentId: 'DetallesLibro', label: 'Detalles', type: #FIELDGROUP_REFERENCE, targetQualifier: 'DetallesLibro', position: 10 }]
+    
+    @UI.lineItem: [{ position: 10, importance: #HIGH }]
+    Nombre;
+    @UI.lineItem: [{ position: 30, importance: #HIGH }]
+    Apellidos;
+    
+    @UI.fieldGroup: [{ qualifier: 'DetallesLibro', position: 20 }]
+    Email;
+    @UI.fieldGroup: [{ qualifier: 'DetallesLibro', position: 30 }]
+    TipoAcceso;
+    @UI.fieldGroup: [{ qualifier: 'DetallesLibro', position: 40 }]
+    IdCliente;
+    
+}

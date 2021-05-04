@@ -1,0 +1,6 @@
+@EndUserText.label: 'Service expose Libros'
+define service Z_EXPOSE_LIBROS {
+  expose Z_I_LIBROS_481 as Libros;
+  expose Z_B_ACC_CATE_481 as AccCatego;
+  expose Z_B_CLNT_LIB_481 as ClntLib;
+}
